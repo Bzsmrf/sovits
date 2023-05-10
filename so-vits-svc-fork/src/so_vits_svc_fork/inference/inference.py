@@ -3,8 +3,8 @@ from main import *
 
 artistDictionary = {}
 artistDictionary['Drake']  = "G_166400.pth config.json 0"
-artistDictionary['Eminem'] = ""
-artistDictionary['Kanye']  = ""
+artistDictionary['Eminem'] = "G_86400.pth  config.json 0"
+artistDictionary['Kanye']  = "G_199200.pth config.json 0"
 print("Artist List: Drake, Eminem, Kanye.")
 name = input("Enter Artist: ")
 def convertAudio(artistDictioary, name):
