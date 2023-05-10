@@ -1,7 +1,9 @@
 import os
 import subprocess
-import zipfile
 import urllib.request
+from mega import Mega
+import gdown
+import zipfile
 
 REPO_URL = "https://github.com/Bzsmrf/so-vits-svc-fork.git"
 
@@ -14,17 +16,18 @@ if not os.path.exists('output'):
     os.mkdir('output')
 
 # download models
-# MODELS = {
-#     'drake': 'https://mega.nz/file/Sm53wAwI#4PmIrSWDrEP1-pnZb5MJpTcfoHy3OBhBOhn2FVxfyb8',
-#     'kanye': 'https://mega.nz/file/Dr40kCQI#G3bEWPvUvTa9SBJKQt7rETgcFds4ssnJF0nGN9aAXTk',
-#     'eminem': 'https://drive.google.com/file/d/1KVUMEEX4aTR5S-l1Chv4SO63SyoKKcv8/view'
-# }
+mega = Mega()
+m = mega.login()
+m.download_url('https://mega.nz/file/Sm53wAwI#4PmIrSWDrEP1-pnZb5MJpTcfoHy3OBhBOhn2FVxfyb8')
+m.download_url('https://mega.nz/file/Dr40kCQI#G3bEWPvUvTa9SBJKQt7rETgcFds4ssnJF0nGN9aAXTk')
+# gdown.download('https://drive.google.com/uc?id=1KVUMEEX4aTR5S-l1Chv4SO63SyoKKcv8')
 
-# for model_name, model_url in MODELS.items():
-#     print(f'Downloading {model_name}...')
-#     urllib.request.urlretrieve(model_url, f'{model_name}.zip')  
-#     with zipfile.ZipFile(f'{model_name}.zip',"r") as zip_ref:
-#         zip_ref.extractall("so-vits-svc-fork\src\so_vits_svc_fork\inference")
+with zipfile.ZipFile("drake05.zip","r") as zip_ref:
+    zip_ref.extractall("so-vits-svc-fork\src\so_vits_svc_fork\inference")
+with zipfile.ZipFile("ye200k.zip","r") as zip_ref:
+    zip_ref.extractall("so-vits-svc-fork\src\so_vits_svc_fork\inference")
+# with zipfile.ZipFile("eminem general model 86k.zip","r") as zip_ref:
+#     zip_ref.extractall("so-vits-svc-fork\src\so_vits_svc_fork\inference")
 
 
 os.chdir('so-vits-svc-fork\src\so_vits_svc_fork\inference')
