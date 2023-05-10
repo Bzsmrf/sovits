@@ -2,7 +2,7 @@
 
 #prequisite steps <br>
 
--Manually download model {for eminem only}<br>
+- Manually download model {for eminem only}<br>
 - git clone the repo 
 - then put the .pth files and .config file in this file path <br>
 so-vits-svc-fork\src\so_vits_svc_fork\inference
