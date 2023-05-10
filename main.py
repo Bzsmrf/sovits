@@ -2,18 +2,19 @@ import os
 import subprocess
 import urllib.request
 from mega import Mega
-import gdown
+# import gdown
 import zipfile
 
 REPO_URL = "https://github.com/Bzsmrf/so-vits-svc-fork.git"
 
 # Branch (for development)
-if not os.path.exists('so-vits-svc-fork'):
-    os.system(f'git clone {REPO_URL}')
 if not os.path.exists('input'):
     os.mkdir('input')
 if not os.path.exists('output'):
     os.mkdir('output')
+if not os.path.exists('so-vits-svc-fork'):
+    os.system(f'git clone {REPO_URL}')
+
 
 # download models
 mega = Mega()
