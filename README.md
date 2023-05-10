@@ -7,8 +7,8 @@
 - then put the folder of eminem_model in this file path <br>
 so-vits-svc-fork\src\so_vits_svc_fork\inference
 - run main.py
-- choose a model naeme "Drake" "Eminem" "Kanye"
 - put your .wav file in input folder
+- choose a model naeme "Drake" "Eminem" "Kanye"
 - get your output in output folder
 
 #common error user can face <br>
