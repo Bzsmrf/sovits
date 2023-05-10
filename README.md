@@ -7,8 +7,8 @@
 - git clone the repo 
 - run main.py
 
-#common error user can face 
--not given a .wav file in input folder 
+#common error user can face <br>
+-not given a .wav file in input folder <br>
 -not putting the model in the right path 
 
 
